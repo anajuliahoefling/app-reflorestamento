@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <section class="login">
+  <section class="tela_login">
   	<form method="get" action="#">
   		<legend>MEMBER LOGIN</legend>
   		<label>Usuário</label>
@@ -72,8 +72,14 @@
     </form>
   </section>
 
+  <section class="tela_inicial">
+
+  </section>
+
 <script src="js/jquery-3.3.1.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
+
+i =0;
 
 $(".registro").on("click", function(){
     $(".login").hide();
@@ -91,8 +97,29 @@ $(".cadastro").on("click",function(){
     }
 });
 $(".login").on("click", function(){
-  if($("."))
+   Login();
+   if(i==0){
+      alert("Dados incorretos, tente novamente");
+   }
 });
+
+function Login() {
+  var done=0;
+  var usuario = document.getElementsByName('usuario')[0].value;
+  var senha= document.getElementsByName('senha')[0].value;
+  usuario = usuario.toLowerCase();
+  seha=senha.toLowerCase();
+
+  if (usuario=="admin" && senha=="admin") {
+    window.location="/p/admin.html";
+    done=1;
+    console.log("Entrou");
+    i = 1;
+    $(".tela_login").hide();
+    $(".tela_inicial").show();
+  } 
+}
+
 </script>
 </body>
 </html>
