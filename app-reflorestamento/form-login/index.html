@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <section class="login">
+  	<form method="get" action="#">
+  		<legend>MEMBER LOGIN</legend>
+  		<label>Usuário</label>
+  		<input type="text" name="usuario" placeholder="Usuário" class="usuario">
+  		<label>Senha</label>
+  		<input type="password" name="senha" placeholder="Senha" class="senha">
+  		<input type="submit" name="login" value="LOGIN" class="login">
+
+  		<button class="registro">Registre-se</button>
+  		
+  	</form>
+
+  	<div>
+  		<h1>DIGITAL PRODUCTS MARKETPLACE</h1>
+  		<p>Your perfect place to buy & sell digital goods</p>
+  	</div>
+
+  </section>
+  <section class="cadastro_user">
+      <form method="get" action="#">
+      <legend>Cadastro</legend>
+      <label for="nome">Nome Completo∗</label>
+      <input type="text" name="nome" id="nome">
+
+      <label for="nome_user">Nome de Usuário∗</label>
+      <input type="text" name="nome_user" id="nome_user">
+
+      <label for="codigo">Código do Proprietário∗</label>
+      <input type="text" name="codigo" id="codigo">
+
+      <label for="cpf">CPF/CNPJ∗</label>
+      <input type="text" name="cpf" id="cpf" placeholder="999.999.999-99">
+      <label for="rg">RG∗</label>
+      <input type="text" name="rg" id="rg" placeholder="9.999.999">
+
+      <p>Sexo</p>
+      <label class="sexo"><input type="radio" name="sexo" class="botao"> Masculino </label>
+      <label class="sexo"><input type="radio" name="sexo" class="botao"> Feminino </label>
+      
+      <label for="telefone">Telefone∗</label>
+      <input type="text" name="telefone" id="telefone" placeholder="(99) 9999-9999">
+      <select name="telefone" id="telefone" > 
+        <option>Celular</option>
+        <option>Residencial</option>
+        <option>Trabalho</option>
+      </select>
+      <label for="senha">Senha∗</label>
+      <input type="password" name="senha" id="senha">
+      <label for="confirmar">Confirmar Senha∗</label>
+      <input type="password" name="confirmar" id="confirmar">
+      
+      <label for="checkbox2" class="preto"> <input type="checkbox" name="checkbox2" id="checkbox2">
+      Desejo receber notificações</label>
+
+      <input type="submit" name="cadastro" value="CADASTRE-SE" class="cadastro">  
+      <p class="sessao"> Já possui uma conta? <button class="sessao">Iniciar sessão </button></p>
+      
+    </form>
+  </section>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
+
+$(".registro").on("click", function(){
+    $(".login").hide();
+    $(".cadastro_user").show();
+});
+
+$(".sessao").on("click",function(){
+    $(".cadastro_user").hide();
+    $(".login").show();
+});
+
+$(".cadastro").on("click",function(){
+    if($(".senha")!= $(".confirmar")){
+      alert("Senha incorreta");
+    }
+});
+$(".login").on("click", function(){
+  if($("."))
+});
+</script>
+</body>
+</html>

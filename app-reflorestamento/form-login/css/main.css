@@ -1,0 +1,127 @@
+body{
+	background: #F9CCB5;
+	font-family: "Open Sans";
+}
+section.login{
+	display: flex;
+	margin-top: 10vw;
+	box-shadow: 0.8vw 0.8vw 3vw rgba(0,0,0, 0.2);
+	width: 47.5vw;
+	margin: 10vw 24vw;
+}
+section.login form{
+	background: white;
+	padding: 3vw 2vw 5vw 2vw;
+	border-radius: 3px 0 0 3px;
+}
+section.login div{
+	border-radius: 0 3px 3px 0;
+	background: linear-gradient(rgba(208,170,170, 0.2), rgba(208,170,170, 0.2)), url("../img/fundo-elemento-textual.jpg");
+}
+section.login form legend{
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.6em;
+}
+section.login form input{
+	display: block;
+	margin: 2.5vw 0vw 2vw 0vw;
+	border: none;
+	border-bottom: 1px #BFBFBF solid;
+	padding: 0 0 1vw 0;
+	width: 100%;
+}
+section.login form input.usuario{
+	background: url(../img/icon-user.png) no-repeat right center;
+}
+section.login form input.senha{
+	background: url(../img/icon-pass.png) no-repeat right center;
+}
+section.login form input.botao{
+	background: #D15716;
+	color: white;
+	padding: 0.7vw 2vw 0.7vw 2vw;
+	border-radius: 2vw;
+	width: auto;
+}
+section.login form label{
+	display: none;
+}
+section.login form button.registro{
+	display: flex;
+	justify-content: space-between;
+	margin: 2vw 0 0 0;
+	color: #D05715;
+	font-size: 0.9em;
+	border: none;
+	background: none;
+}
+section.login div{
+	color: white;
+	font-size: 2em;
+	text-align: center;
+	line-height: 1.1em;
+}
+section.login div h1{
+	font-weight: bold;
+	width: 25vw;
+	margin: 5vw 3vw 5vw 3vw;
+}
+section.login div p{
+	width: 25vw;
+	margin: 8vw 3vw 4vw 3vw;
+}
+/*CADASTROUSER*/
+
+section.cadastro_user{
+	width: 25vw;
+	margin: 0 auto;
+	display: none;
+}
+section.cadastro_user form legend{
+	font-size: 1.8em;
+	margin: 2vw 0 2vw 0;
+}
+section.cadastro_user form label{
+	display: block; 
+	color: #0F73BC;
+	margin: 1.5vw 0;
+	font-size: 1em;
+}
+section.cadastro_user form input{
+	border: 2px solid #C6D9EB;
+	padding: 0.5vw 3.5vw 0.5vw 0.5vw;
+}
+section.cadastro_user form select{
+	border: 2px solid #C6D9EB;
+	padding: 0.4vw 1vw;
+}
+section.cadastro_user form input.cadastro{
+	border-width: 1px;
+	border-style: solid;
+	border-color: #0F73BC;
+	padding: 0.8vw;
+	color: #0F73BC;
+	background: white;
+	margin: 1.5vw 0;
+	transition: 1s;
+	cursor: pointer;
+}
+section.cadastro_user form input.cadastro:hover{
+	color: white;
+	background: #0F73BC;
+	transition: 1s;
+}
+section.cadastro_user form p{
+	color: #0F73BC;
+	font-size: 0.95em;
+	margin: 2vw 0 1vw 0;
+}
+section.cadastro_user form p button.sessao{
+	background: none;
+	border:none;
+	color: #D05715;
+}
+section.cadastro_user form label.sexo{
+	display: inline;
+}
