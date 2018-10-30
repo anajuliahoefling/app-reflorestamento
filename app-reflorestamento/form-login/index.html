@@ -18,22 +18,21 @@
   		<input type="text" name="usuario" placeholder="Usuário" class="usuario">
   		<label>Senha</label>
   		<input type="password" name="senha" placeholder="Senha" class="senha">
-  	<!-- 	<input type="submit" name="login" value="LOGIN" class="login">
- -->
-      <button class="login">LOGIN</button>
+  		<input type="submit" name="login" value="LOGIN" class="login">
+
   		<button class="registro">Registre-se</button>
   		
   	</form>
 
   	<div>
-  		<h1>CONTROLE DE REFLORESTAMENTO</h1>
-  		<p>O reflorestamento tem sido uma prática muito importante para a melhoria da qualidade de vida bem como para garantir o futuro da humanidade</p>
+  		<h1>DIGITAL PRODUCTS MARKETPLACE</h1>
+  		<p>Your perfect place to buy & sell digital goods</p>
   	</div>
 
   </section>
   <section class="cadastro_user">
       <form method="get" action="#">
-      <legend>Cadastro</legend>
+      <legend>Cadastro Usuário</legend>
       <label for="nome">Nome Completo∗</label>
       <input type="text" name="nome" id="nome">
 
@@ -64,19 +63,96 @@
       <label for="confirmar">Confirmar Senha∗</label>
       <input type="password" name="confirmar" id="confirmar">
       
-      <label for="checkbox2" class="preto"> <input type="checkbox" name="checkbox2" id="checkbox2">
-      Desejo receber notificações</label>
-
       <input type="submit" name="cadastro" value="CADASTRE-SE" class="cadastro">  
-      <p class="sessao"> Já possui uma conta? <button class="sessao">Iniciar sessão </button></p>
       
     </form>
   </section>
 
-  <section class="tela_inicial">
-      <div class="inicial">
-        <h2>que</h2>
-      </div>
+  <section class="propriedade">
+    <form method="get" action="#">
+      <legend>Cadastro Propriedade</legend>
+      <label for="codigo">Código do Proprietário∗</label>
+      <input type="text" name="codigo" id="codigo">
+
+      <label for="codigo_ident">Código de Identificação∗</label>
+      <input type="text" name="codigo_ident" id="codigo_ident">
+
+      <label for="endereco">Endereço∗</label>
+
+      <input type="text" name="rua" id="rua" placeholder="Rua">
+      <input type="text" name="bair_loc" id="bair_loc" placeholder="Bairro/localidade">
+      <input type="text" name="cidade" id="cidade" placeholder="Cidade">
+      <input type="text" name="estado" id="estado" placeholder="Estado">
+      <input type="text" name="cep" id="cep" placeholder="CEP">
+
+      <label for="metragem">Metragem∗</label>
+      <input type="text" name="metragem" id="metragem">
+
+      <p>Zona</p>
+      <label class="zona"><input type="radio" name="zona" class="botao"> Zona Urbana </label>
+      <label class="zona"><input type="radio" name="zona" class="botao"> Zona Rural </label>
+
+      <label for="metragem">Multa∗</label>
+      <input type="text" name="multa" id="multa">
+
+      <input type="submit" name="cadastro" value="CADASTRAR" class="cadastro">  
+    </form>
+  </section>
+
+    <section class="areas_reflorestadas">
+      <form method="get" action="#">
+      <legend>Cadastro Áreas Reflorestadas</legend>
+      <label for="prop">Propriedade∗</label>
+      <input type="text" name="propriedade" id="propriedade">
+
+      <label for="periodo">Período∗</label>
+      <input type="text" name="periodo" id="periodo">
+
+      <label for="tamanho_prop">Tamanho total da propriedade∗</label>
+      <input type="text" name="tamanho_prop" id="tamanho_prop">
+
+      <label for="tamanho_reflor">Tamanho área reflorestada∗</label>
+      <input type="text" name="tamanho_reflor" id="tamanho_reflor">
+
+      <label for="quant_plantas">Quantidade de plantas∗</label>
+      <input type="text" name="quant_plantas" id="quant_plantas">
+
+      <label for="tipo">Tipo∗</label>
+      <input type="text" name="tipo" id="tipo">
+
+      <label for="objetivo">Objetivo∗</label>
+      <input type="text" name="objetivo" id="objetivo">
+
+      <label for="obser">Observações∗</label>
+      <input type="text" name="obser" id="obser">
+     
+      <label for="arvore_plantada">Árvore plantada∗</label>
+      <input type="text" name="arvore_plantada" id="arvore_plantada">
+
+      <input type="submit" name="cadastro" value="CADASTRAR" class="cadastro">  
+
+    </form>
+  </section>
+
+      <section class="cadastro_arvores">
+        <form method="get" action="#">
+        <legend>Cadastro Árvore</legend>
+      <label for="nome">Nome∗</label>
+      <input type="text" name="nome" id="nome">
+
+      <label for="desc">Descrição∗</label>
+      <input type="text" name="desc" id="desc">
+
+     <p>Status</p>
+      <label class="status"><input type="radio" name="status" class="botao"> Adequada </label>
+      <label class="status"><input type="radio" name="status" class="botao"> Inadequada </label>
+
+      <label for="necessidades">Necessidades∗</label>
+      <input type="text" name="necessidades" id="necessidades">
+
+      <input type="submit" name="cadastro" value="CADASTRAR" class="cadastro">  
+
+    </form>
   </section>
 
 <script src="js/jquery-3.3.1.min.js"></script>
@@ -85,7 +161,7 @@
 i =0;
 
 $(".registro").on("click", function(){
-    $(".tela_login").hide();
+    $(".login").hide();
     $(".cadastro_user").show();
 });
 
@@ -100,31 +176,28 @@ $(".cadastro").on("click",function(){
     }
 });
 $(".login").on("click", function(){
-
-   $(".tela_login").hide();
-   $(".tela_inicial").show();
-   // Login();
-   // if(i==0){
-   //    alert("Dados incorretos, tente novamente");
-   // }
+   Login();
+   if(i==0){
+      alert("Dados incorretos, tente novamente");
+   }
 });
 
-// function Login() {
-//   var done=0;
-//   var usuario = document.getElementsByName('usuario')[0].value;
-//   var senha= document.getElementsByName('senha')[0].value;
-//   usuario = usuario.toLowerCase();
-//   seha=senha.toLowerCase();
+function Login() {
+  var done=0;
+  var usuario = document.getElementsByName('usuario')[0].value;
+  var senha= document.getElementsByName('senha')[0].value;
+  usuario = usuario.toLowerCase();
+  seha=senha.toLowerCase();
 
-//   if (usuario=="admin" && senha=="admin") {
-//     window.location="/p/admin.html";
-//     done=1;
-//     console.log("Entrou");
-//     i = 1;
-//     $(".tela_login").hide();
-//     $(".tela_inicial").show();
-//   } 
-// }
+  if (usuario=="admin" && senha=="admin") {
+    window.location="/p/admin.html";
+    done=1;
+    console.log("Entrou");
+    i = 1;
+    $(".tela_login").hide();
+    $(".tela_inicial").show();
+  } 
+}
 
 </script>
 </body>
