@@ -3,7 +3,10 @@ body{
 	font-family: "Open Sans";
 }
 section.tela_login{
-	display: flex;
+	display: none;
+}
+section.tela_login{
+/*	display: flex;*/
 	margin-top: 10vw;
 	box-shadow: 0.8vw 0.8vw 3vw rgba(0,0,0, 0.2);
 	width: 55vw;
@@ -89,7 +92,7 @@ section.tela_login div p{
 	width: 30vw;
 }
 section.tela_login div p{
-	width: 25vw;
+	width: 30vw;
 	margin: 8vw 3vw 4vw 3vw;
 }
 
@@ -150,6 +153,55 @@ section.cadastro_user form label.sexo{
 
 /* ----------------------- TELA INICIAL ----------------------------*/
 section.tela_inicial{
-	display: none;
-	background: black;
+	display: flex;
+	box-shadow: 0.8vw 0.8vw 3vw rgba(0,0,0, 0.2);
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+}
+section.tela_inicial h2{
+	font-weight: bold;
+	width: 80vw;
+	margin: 1vw 3vw 1vw 3vw;
+	text-align: center;
+}
+section.tela_inicial button.sair{
+	box-shadow: 0.8vw 0.8vw 3vw rgba(0,0,0, 0.2);
+	margin-top: 0vh;
+	text-align: center;
+	width: 5vw;
+	height: 5vh;
+	border: none;
+	background: #2E8B57;
+	font-weight: bold;
+	font-size: 1em;
+	color: white;
+}
+section.tela_inicial div{
+	width: 90vw;
+	height: 80vh;
+	margin-top: 10vh;
+	margin-left: 5vw;
+	border-radius: 0 3px 3px 0;
+	background: white;
+	overflow: auto;
+}
+section.tela_inicial div ul{
+	display: block;
+	background: red;
+}
+section.tela_inicial div ul li{
+	display: flex;
+	width: 89.85vw;
+	background: white;
+	line-height: 20px;
+	font-size: 0.8em;
+	border: 1px solid;
+}
+section.tela_inicial div ul li p{
+	width: 100vw;
+}
+section.tela_inicial div ul li span{
+		
+	width: 60vw;
 }
