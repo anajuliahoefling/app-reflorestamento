@@ -1,5 +1,5 @@
 body{
-	background: #2E8B57;
+	background: #F9CCB5;
 	font-family: "Open Sans";
 }
 section.tela_login{
@@ -9,17 +9,17 @@ section.tela_login{
 /*	display: flex;*/
 	margin-top: 10vw;
 	box-shadow: 0.8vw 0.8vw 3vw rgba(0,0,0, 0.2);
-	width: 55vw;
+	width: 47.5vw;
 	margin: 10vw 24vw;
 }
 section.tela_login form{
 	background: white;
-	padding: 4vw 3vw 6vw 3vw;
+	padding: 3vw 2vw 5vw 2vw;
 	border-radius: 3px 0 0 3px;
 }
 section.tela_login div{
 	border-radius: 0 3px 3px 0;
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/fundo-elemento-textual.jpg");
+	background: linear-gradient(rgba(208,170,170, 0.2), rgba(208,170,170, 0.2)), url("../img/fundo-elemento-textual.jpg");
 }
 section.tela_login form legend{
 	text-align: center;
@@ -50,17 +50,6 @@ section.tela_login form input.botao{
 section.tela_login form label{
 	display: none;
 }
-section.tela_login form button.login{
-	display: flex;
-	justify-content: space-between;
-	margin: 2vw 0 0 0;
-	color: white;
-	font-size: 0.9em;
-	border: none;
-	padding: 0.5vw 5vw 0.5vw 5vw;
-	background: green;
-}
-
 section.tela_login form button.registro{
 	display: flex;
 	justify-content: space-between;
@@ -76,14 +65,9 @@ section.tela_login div{
 	text-align: center;
 	line-height: 1.1em;
 }
-
 section.tela_login div h1{
-	color: white;
-}	
-section.tela_login div h1{
-
 	font-weight: bold;
-	width: 30vw;
+	width: 25vw;
 	margin: 5vw 3vw 5vw 3vw;
 }
 section.tela_login div p{
@@ -99,10 +83,11 @@ section.tela_login div p{
 /* ----------------------- CADASTROUSER ----------------------------*/
 
 section.cadastro_user{
+	display: none;
 	width: 25vw;
 	margin: 0 auto;
-	display: none;
 }
+
 section.cadastro_user form legend{
 	font-size: 1.8em;
 	margin: 2vw 0 2vw 0;
@@ -202,6 +187,114 @@ section.tela_inicial div ul li p{
 	width: 100vw;
 }
 section.tela_inicial div ul li span{
-		
 	width: 60vw;
+	display: none;
+	background: black;
+}
+
+
+
+section.areas_reflorestadas{
+	display: none;
+	width: 25vw;
+	margin: 0 auto;
+}
+
+section.areas_reflorestadas form legend{
+	font-size: 1.8em;
+	margin: 2vw 0 2vw 0;
+}
+
+section.areas_reflorestadas form label{
+	display: block; 
+	color: #0F73BC;
+	margin: 1.5vw 0;
+	font-size: 1em;
+}
+
+section.areas_reflorestadas form input{
+	border: 2px solid #C6D9EB;
+	padding: 0.5vw 3.5vw 0.5vw 0.5vw;
+}
+
+section.areas_reflorestadas form p button.cadastro{
+	background: none;
+	border:none;
+	color: #D05715;
+}
+
+/*************************************************************/
+
+
+section.propriedade{
+	display: none;
+	width: 25vw;
+	margin: 0 auto;
+}
+
+section.propriedade form legend{
+	font-size: 1.8em;
+	margin: 2vw 0 2vw 0;
+}
+
+section.propriedade form label{
+	display: block; 
+	color: #0F73BC;
+	margin: 1.5vw 0;
+	font-size: 1em;
+}
+
+section.propriedade form input{
+	border: 2px solid #C6D9EB;
+	padding: 0.5vw 3.5vw 0.5vw 0.5vw;
+}
+
+section.propriedade form p{
+	color: #0F73BC;
+	font-size: 0.95em;
+	margin: 2vw 0 1vw 0;
+}
+section.propriedade form p button.cadastro{
+	background: none;
+	border:none;
+	color: #D05715;
+}
+section.propriedade form label.zona{
+	display: inline;
+}
+/*************************************************************/
+
+
+section.cadastro_arvores{
+	display: none;
+	width: 25vw;
+	margin: 0 auto;
+}
+
+section.cadastro_arvores form legend{
+	font-size: 1.8em;
+	margin: 2vw 0 2vw 0;
+}
+
+section.cadastro_arvores form label{
+	display: block; 
+	color: #0F73BC;
+	margin: 1.5vw 0;
+	font-size: 1em;
+}
+
+section.cadastro_arvores form input{
+	border: 2px solid #C6D9EB;
+	padding: 0.5vw 3.5vw 0.5vw 0.5vw;
+}
+
+section.cadastro_arvores form p{
+	color: #0F73BC;
+	font-size: 0.95em;
+	margin: 2vw 0 1vw 0;
+}
+section.cadastro_arvores form p button.cadastro{
+	background: none;
+	border:none;
+	color: #D05715;
 }
