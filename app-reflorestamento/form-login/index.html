@@ -31,8 +31,10 @@
 
   </section>
   <section class="cadastro_user">
+
+    <div>
       <form method="get" action="#">
-      <legend>Cadastro Usuário</legend>
+      <legend>Cadastro</legend>
       <label for="nome">Nome Completo∗</label>
       <input type="text" name="nome" id="nome">
 
@@ -62,10 +64,12 @@
       <input type="password" name="senha" id="senha">
       <label for="confirmar">Confirmar Senha∗</label>
       <input type="password" name="confirmar" id="confirmar">
-      
-      <input type="submit" name="cadastro" value="CADASTRE-SE" class="cadastro">  
+
+      <input type="submit" name="cadastro" value="CADASTRE-SE" class="cadastro"> 
       
     </form>
+
+    </div>
   </section>
 
   <section class="propriedade">
@@ -201,7 +205,7 @@
 i =0;
 
 $(".registro").on("click", function(){
-    $(".login").hide();
+    $(".tela_login").hide();
     $(".cadastro_user").show();
 });
 

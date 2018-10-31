@@ -6,7 +6,7 @@ section.tela_login{
 	display: none;
 }
 section.tela_login{
-/*	display: flex;*/
+	display: flex;
 	margin-top: 10vw;
 	box-shadow: 0.8vw 0.8vw 3vw rgba(0,0,0, 0.2);
 	width: 47.5vw;
@@ -84,55 +84,61 @@ section.tela_login div p{
 
 section.cadastro_user{
 	display: none;
+}
+section.cadastro_user div{
+	background: white;
 	width: 25vw;
-	margin: 0 auto;
+	margin: 7vw 0 15vw 30vw;
+	padding: 5vw;
+	box-shadow: 0.8vw 0.8vw 3vw rgba(0,0,0, 0.5);
 }
-
-section.cadastro_user form legend{
+section.cadastro_user div form legend{
 	font-size: 1.8em;
-	margin: 2vw 0 2vw 0;
+	margin: 0vw 0 2vw 0;
+	text-align: center;
+	font-weight: bold;
 }
-section.cadastro_user form label{
+section.cadastro_user div form label{
 	display: block; 
-	color: #0F73BC;
+	color: #2E8B57;
 	margin: 1.5vw 0;
 	font-size: 1em;
 }
-section.cadastro_user form input{
-	border: 2px solid #C6D9EB;
+section.cadastro_user div form input{
+	border: 2px solid #2E8B57;
 	padding: 0.5vw 3.5vw 0.5vw 0.5vw;
 }
-section.cadastro_user form select{
-	border: 2px solid #C6D9EB;
+section.cadastro_user div form input.cadastro{
+	display: block;
+}
+section.cadastro_user div form select{
+	border: 2px solid #2E8B57;
 	padding: 0.4vw 1vw;
 }
-section.cadastro_user form input.cadastro{
+section.cadastro_user div form input.cadastro{
 	border-width: 1px;
 	border-style: solid;
-	border-color: #0F73BC;
+	border-color: #2E8B57;
 	padding: 0.8vw;
-	color: #0F73BC;
+	color: #2E8B57;
 	background: white;
 	margin: 1.5vw 0;
 	transition: 1s;
 	cursor: pointer;
 }
-section.cadastro_user form input.cadastro:hover{
+section.cadastro_user div form input.cadastro:hover{
 	color: white;
-	background: #0F73BC;
+	background: #2E8B57;
 	transition: 1s;
 }
-section.cadastro_user form p{
-	color: #0F73BC;
+section.cadastro_user div form p{
+	color: #2E8B57;
 	font-size: 0.95em;
-	margin: 2vw 0 1vw 0;
+	margin: 0vw 0 0vw 0;
+	font-size: 1em;
+	margin: 1.5vw 0;
 }
-section.cadastro_user form p button.sessao{
-	background: none;
-	border:none;
-	color: #D05715;
-}
-section.cadastro_user form label.sexo{
+section.cadastro_user div form label.sexo{
 	display: inline;
 }
 
