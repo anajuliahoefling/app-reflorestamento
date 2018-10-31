@@ -1,25 +1,23 @@
 body{
-	background: #F9CCB5;
+	background: #2E8B57;
 	font-family: "Open Sans";
 }
 section.tela_login{
-	display: none;
-}
-section.tela_login{
+	background: #2E8B57;
 	display: flex;
 	margin-top: 10vw;
 	box-shadow: 0.8vw 0.8vw 3vw rgba(0,0,0, 0.2);
-	width: 47.5vw;
+	width: 55vw;
 	margin: 10vw 24vw;
 }
 section.tela_login form{
 	background: white;
-	padding: 3vw 2vw 5vw 2vw;
+	padding: 4vw 3vw 6vw 3vw;
 	border-radius: 3px 0 0 3px;
 }
 section.tela_login div{
 	border-radius: 0 3px 3px 0;
-	background: linear-gradient(rgba(208,170,170, 0.2), rgba(208,170,170, 0.2)), url("../img/fundo-elemento-textual.jpg");
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/fundo-elemento-textual.jpg");
 }
 section.tela_login form legend{
 	text-align: center;
@@ -50,6 +48,17 @@ section.tela_login form input.botao{
 section.tela_login form label{
 	display: none;
 }
+section.tela_login form button.login{
+	display: flex;
+	justify-content: space-between;
+	margin: 2vw 0 0 0;
+	color: white;
+	font-size: 0.9em;
+	border: none;
+	padding: 0.5vw 5vw 0.5vw 5vw;
+	background: green;
+}
+
 section.tela_login form button.registro{
 	display: flex;
 	justify-content: space-between;
@@ -65,9 +74,14 @@ section.tela_login div{
 	text-align: center;
 	line-height: 1.1em;
 }
+
 section.tela_login div h1{
+	color: white;
+}	
+section.tela_login div h1{
+
 	font-weight: bold;
-	width: 25vw;
+	width: 30vw;
 	margin: 5vw 3vw 5vw 3vw;
 }
 section.tela_login div p{
@@ -76,10 +90,9 @@ section.tela_login div p{
 	width: 30vw;
 }
 section.tela_login div p{
-	width: 30vw;
+	width: 25vw;
 	margin: 8vw 3vw 4vw 3vw;
 }
-
 /* ----------------------- CADASTROUSER ----------------------------*/
 
 section.cadastro_user{
