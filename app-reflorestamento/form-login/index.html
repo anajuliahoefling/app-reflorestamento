@@ -74,7 +74,14 @@
     </div>
   </section>
 
+  <section class="tela_inicial">
+      <button class="propriedade">propriedade</button>
+      <button class="areas">areas</button>
+      <button class="arvores">arvores</button>
+  </section>
+
   <section class="propriedade">
+    <div>
     <form method="get" action="#">
       <legend>Cadastro Propriedade</legend>
       <label for="codigo">Código do Proprietário∗</label>
@@ -101,8 +108,9 @@
       <label for="metragem">Multa∗</label>
       <input type="text" name="multa" id="multa">
 
-      <input type="submit" name="cadastro_propri" value="CADASTRAR" class="cadastro_propri">  
+      <button class="cadastrar_propriedade" type="button">CADASTRAR</button> 
     </form>
+    </div>
   </section>
 
     <section class="areas_reflorestadas">
@@ -135,7 +143,7 @@
       <label for="arvore_plantada">Árvore plantada∗</label>
       <input type="text" name="arvore_plantada" id="arvore_plantada">
 
-      <input type="submit" name="cadastro_areasReflo" value="CADASTRAR" class="cadastro_areasReflo">  
+       <button class="cadastrar_arearef" type="button">CADASTRAR</button>   
 
     </form>
   </section>
@@ -204,6 +212,27 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>') 
 
+  var propriedade = $("button.propriedade");
+  var areas = $("button.areas");
+  var arvores = $("button.arvores");
+
+propriedade.on("click", function(){
+    $(".tela_inicial").hide();
+    $(".propriedade").show();
+});
+areas.on("click", function(){
+   $(".tela_inicial").hide();
+    $(".areas_reflorestadas").show();
+});
+arvores.on("click", function(){
+    $(".tela_inicial").hide();
+    $(".cadastro_arvores").show();
+});
+
+
+
+
+  
 $(".registro").on("click", function(){
     $(".tela_login").hide();
     $(".cadastro_user").show();
