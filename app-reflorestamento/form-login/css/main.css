@@ -215,34 +215,54 @@ section.tela_inicial div ul li span{
 	display: none;
 	background: black;
 }
-
+/*========================= areas reflorestadas ~==================*/
 section.areas_reflorestadas{
 	display: none;
+}
+section.areas_reflorestadas div{
+	background: white;
 	width: 25vw;
-	margin: 0 auto;
+	margin: 7vw 0 15vw 30vw;
+	padding: 5vw;
+	box-shadow: 0.8vw 0.8vw 3vw rgba(0,0,0, 0.5);
 }
 
-section.areas_reflorestadas form legend{
+section.areas_reflorestadas div form legend{
 	font-size: 1.8em;
-	margin: 2vw 0 2vw 0;
+	margin: 0vw 0 2vw 0;
+	text-align: center;
+	font-weight: bold;
 }
 
-section.areas_reflorestadas form label{
+section.areas_reflorestadas div form label{
+	margin: 2vw 0 0 0;
 	display: block; 
-	color: #0F73BC;
-	margin: 1.5vw 0;
+	color: #2E8B57;
 	font-size: 1em;
 }
 
-section.areas_reflorestadas form input{
-	border: 2px solid #C6D9EB;
+section.areas_reflorestadas div form input{
+	border: 2px solid #2E8B57;
 	padding: 0.5vw 3.5vw 0.5vw 0.5vw;
+	margin: 1.2vw 0 0 0;
 }
 
-section.areas_reflorestadas form p button.cadastro{
-	background: none;
-	border:none;
-	color: #D05715;
+section.areas_reflorestadas div form button.cadastrar_arearef{
+	display: flex;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #2E8B57;
+	padding: 0.8vw;
+	color: #2E8B57;
+	background: white;
+	margin: 1.5vw 0;
+	transition: 1s;
+	cursor: pointer;
+}
+section.areas_reflorestadas div form button.cadastrar_arearef:hover{
+	color: white;
+	background: #2E8B57;
+	transition: 1s;
 }
 
 /*************************************************************/
