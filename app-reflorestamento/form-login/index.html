@@ -15,13 +15,13 @@
     <form method="get" action="#">
       <legend>MEMBER LOGIN</legend>
       <label>Usuário</label>
-      <input type="text" name="usuario" placeholder="Usuário" class="usuario">
+      <input type="text" name="usuario_login" placeholder="Usuário" class="usuario_login">
       <label>Senha</label>
-      <input type="password" name="senha" placeholder="Senha" class="senha">
+      <input type="password" name="senha_login" placeholder="Senha" class="senha_login">
     <!--  <input type="submit" name="login" value="LOGIN" class="login">
  -->
-      <button class="login">LOGIN</button>
-      <button class="registro">Registre-se</button>
+      <button class="login" type="button">LOGIN</button>
+      <button class="registro" type="button">Registre-se</button>
       
     </form>
 
@@ -40,7 +40,7 @@
       <input type="text" name="nome" id="nome">
 
       <label for="nome_user">Nome de Usuário∗</label>
-      <input type="text" name="nome_user" id="nome_user">
+      <input type="text" name="nome_user" id="nome_user" class="nome_usuario">
 
       <label for="codigo">Código do Proprietário∗</label>
       <input type="text" name="codigo" id="codigo">
@@ -64,10 +64,11 @@
       <label for="senha">Senha∗</label>
       <input type="password" name="senha" id="senha">
       <label for="confirmar">Confirmar Senha∗</label>
-      <input type="password" name="confirmar" id="confirmar">
+      <input type="password" name="confirmar" id="confirmar" class="confirmar">
 
-      <input type="submit" name="cadastro" value="CADASTRE-SE" class="cadastro"> 
-      
+      <button class="cadastro" type="button">CADASTRE-SE</button>
+      <p>Ja possui uma conta? <button class="sessao" type="button">Iniciar Sessão</button></p>
+
     </form>
 
     </div>
@@ -100,7 +101,7 @@
       <label for="metragem">Multa∗</label>
       <input type="text" name="multa" id="multa">
 
-      <input type="submit" name="cadastro" value="CADASTRAR" class="cadastro">  
+      <input type="submit" name="cadastro_propri" value="CADASTRAR" class="cadastro_propri">  
     </form>
   </section>
 
@@ -134,7 +135,7 @@
       <label for="arvore_plantada">Árvore plantada∗</label>
       <input type="text" name="arvore_plantada" id="arvore_plantada">
 
-      <input type="submit" name="cadastro" value="CADASTRAR" class="cadastro">  
+      <input type="submit" name="cadastro_areasReflo" value="CADASTRAR" class="cadastro_areasReflo">  
 
     </form>
   </section>
@@ -195,15 +196,13 @@
       <label for="necessidades">Necessidades∗</label>
       <input type="text" name="necessidades" id="necessidades">
 
-      <input type="submit" name="cadastro" value="CADASTRAR" class="cadastro">  
+      <input type="submit" name="cadastro_arvores" value="CADASTRAR" class="cadastro_arvores">  
 
     </form>
   </section>
 
 <script src="js/jquery-3.3.1.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
-
-i =0;
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>') 
 
 $(".registro").on("click", function(){
     $(".tela_login").hide();
@@ -212,37 +211,63 @@ $(".registro").on("click", function(){
 
 $(".sessao").on("click",function(){
     $(".cadastro_user").hide();
-    $(".login").show();
+    $(".tela_login").show();
 });
 
 $(".cadastro").on("click",function(){
-    if($(".senha")!= $(".confirmar")){
-      alert("Senha incorreta");
+
+    nome = $("#nome").val();
+    nome_user = $(".nome_usuario").val();
+    codigo = $("#codigo").val();
+    cpf = $("#cpf").val();
+    rg = $("#rg").val();
+    telefone = $("#telefone").val();
+    senha = $("#senha").val();
+    senha_user = $(".confirmar").val(); 
+
+    if (nome==""||nome_user==""||codigo==""||cpf==""||rg==""||telefone==""||senha==""||senha_user=="") {
+      alert("Preencha todos os campos!");
+    } else if(senha != senha_user){
+      alert("Insira a mesma senha!");
+    } else {
+      $(".cadastro_user").hide();
+      $(".tela_login").show();
+      $(".cadastro_user div form input").val("");
     }
+
 });
+
 $(".login").on("click", function(){
-   Login();
-   if(i==0){
-      alert("Dados incorretos, tente novamente");
-   }
+    usuario_login = $(".tela_login form input.usuario_login").val();
+    senha_login = $(".tela_login form input.senha_login").val();
+
+    if(usuario_login == "" && senha_login == ""){
+      alert("Preencha seu login e senha!");
+    } else if(usuario_login == nome_user && senha_login == senha_user){
+      $(".tela_login").hide();
+      $(".tela_inicial").show();
+    } else{
+       alert("Dados incorretos, tente novamente");
+    }
+
 });
 
-function Login() {
-  var done=0;
-  var usuario = document.getElementsByName('usuario')[0].value;
-  var senha= document.getElementsByName('senha')[0].value;
-  usuario = usuario.toLowerCase();
-  seha=senha.toLowerCase();
+// function Login() {
+//   var done=0;
+//   var usuario = document.getElementsByName('usuario')[0].value;
+//   var senha= document.getElementsByName('senha')[0].value;
+//   usuario = usuario.toLowerCase();
+//   seha=senha.toLowerCase();
 
-  if (usuario=="admin" && senha=="admin") {
-    window.location="/p/admin.html";
-    done=1;
-    console.log("Entrou");
-    i = 1;
-    $(".tela_login").hide();
-    $(".tela_inicial").show();
-  } 
-}
+//   if (usuario=="admin" && senha=="admin") {
+//     window.location="/p/admin.html";
+//     done=1;
+//     console.log("Entrou");
+//     i = 1;
+//     $(".tela_login").hide();
+//     $(".tela_inicial").show();
+//   } 
+// }
 
 </script>
 </body>

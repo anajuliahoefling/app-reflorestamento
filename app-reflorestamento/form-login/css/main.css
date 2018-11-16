@@ -79,7 +79,6 @@ section.tela_login div h1{
 	color: white;
 }	
 section.tela_login div h1{
-
 	font-weight: bold;
 	width: 30vw;
 	margin: 5vw 3vw 5vw 3vw;
@@ -128,7 +127,7 @@ section.cadastro_user div form select{
 	border: 2px solid #2E8B57;
 	padding: 0.4vw 1vw;
 }
-section.cadastro_user div form input.cadastro{
+section.cadastro_user div form button.cadastro{
 	border-width: 1px;
 	border-style: solid;
 	border-color: #2E8B57;
@@ -139,7 +138,7 @@ section.cadastro_user div form input.cadastro{
 	transition: 1s;
 	cursor: pointer;
 }
-section.cadastro_user div form input.cadastro:hover{
+section.cadastro_user div form button.cadastro:hover{
 	color: white;
 	background: #2E8B57;
 	transition: 1s;
@@ -153,6 +152,12 @@ section.cadastro_user div form p{
 }
 section.cadastro_user div form label.sexo{
 	display: inline;
+}
+section.cadastro_user div form p button.sessao{
+	color: #D05715;
+	font-size: 0.9em;
+	border: none;
+	background: none;
 }
 
 /* ----------------------- TELA INICIAL ----------------------------*/
@@ -210,8 +215,6 @@ section.tela_inicial div ul li span{
 	display: none;
 	background: black;
 }
-
-
 
 section.areas_reflorestadas{
 	display: none;
