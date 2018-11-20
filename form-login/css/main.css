@@ -163,10 +163,15 @@ section.cadastro_user div form p button.sessao{
 /* ----------------------- TELA INICIAL ----------------------------*/
 section.tela_inicial{
 	display: none;
-	box-shadow: 0.8vw 0.8vw 3vw rgba(0,0,0, 0.2);
-	width: 100vw;
-	height: 100vh;
 	justify-content: center;
+}
+section.tela_inicial h1{
+	font-size: 1.8em;
+	margin: 5vw 0 2vw 0;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: 1.6em;
 }
 section.tela_inicial h2{
 	font-weight: bold;
@@ -174,9 +179,57 @@ section.tela_inicial h2{
 	margin: 1vw 3vw 1vw 3vw;
 	text-align: center;
 }
+section.tela_inicial button.propriedade{
+	margin: 0 0 0 38vw;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #2E8B57;
+	padding: 0.8vw;
+	color: #2E8B57;
+	background: white;
+	transition: 1s;
+	cursor: pointer;
+}
+section.tela_inicial button.propriedade:hover{
+	color: white;
+	background: #2E8B57;
+	transition: 1s;
+}
+section.tela_inicial button.areas{
+	border-width: 1px;
+	border-style: solid;
+	border-color: #2E8B57;
+	padding: 0.8vw;
+	color: #2E8B57;
+	background: white;
+	margin: 1.5vw 0;
+	transition: 1s;
+	cursor: pointer;
+}
+section.tela_inicial button.areas:hover{
+	color: white;
+	background: #2E8B57;
+	transition: 1s;
+}
+section.tela_inicial button.arvores{
+	border-width: 1px;
+	border-style: solid;
+	border-color: #2E8B57;
+	padding: 0.8vw;
+	color: #2E8B57;
+	background: white;
+	margin: 1.5vw 0;
+	transition: 1s;
+	cursor: pointer;
+}
+section.tela_inicial button.arvores:hover{
+	color: white;
+	background: #2E8B57;
+	transition: 1s;
+}
 section.tela_inicial button.sair{
 	box-shadow: 0.8vw 0.8vw 3vw rgba(0,0,0, 0.2);
-	margin-top: 0vh;
+	margin: 2vw 0 2vw 50vw;
 	text-align: center;
 	width: 5vw;
 	height: 5vh;
@@ -186,34 +239,75 @@ section.tela_inicial button.sair{
 	font-size: 1em;
 	color: white;
 }
+section.tela_inicial h3{
+	font-size: 1.8em;
+	margin: 5vw 0 2vw 0;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: 1.6em;
+}
+section.tela_inicial button.areascon{
+	margin: 0 0 0 42vw;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #2E8B57;
+	padding: 0.8vw;
+	color: #2E8B57;
+	background: white;
+	transition: 1s;
+	cursor: pointer;
+}
+section.tela_inicial button.areascon:hover{
+	color: white;
+	background: #2E8B57;
+	transition: 1s;
+}
+section.tela_inicial button.arvorescon{
+	border-width: 1px;
+	border-style: solid;
+	border-color: #2E8B57;
+	padding: 0.8vw;
+	color: #2E8B57;
+	background: white;
+	transition: 1s;
+	cursor: pointer;
+}
+section.tela_inicial button.arvorescon:hover{
+	color: white;
+	background: #2E8B57;
+	transition: 1s;
+}
 section.tela_inicial div{
 	width: 90vw;
-	height: 80vh;
-	margin-top: 10vh;
+	height: 60vh;
+	margin-top: 8vh;
 	margin-left: 5vw;
-	border-radius: 0 3px 3px 0;
-	background: white;
+	border-radius: 5px;
+	background:#E8E8E8;
 	overflow: auto;
+	box-shadow: 0.8vw 0.8vw 3vw rgba(0,0,0, 0.5);
 }
 section.tela_inicial div ul{
 	display: block;
 	background: red;
+	overflow: auto;
 }
 section.tela_inicial div ul li{
 	display: flex;
 	width: 89.85vw;
-	background: white;
 	line-height: 20px;
 	font-size: 0.8em;
 	border: 1px solid;
+	color: white;
+	background: #2E8B57;
 }
 section.tela_inicial div ul li p{
 	width: 100vw;
 }
 section.tela_inicial div ul li span{
 	width: 60vw;
-	display: none;
-	background: black;
+	font-weight: bold;
 }
 /*========================= areas reflorestadas ~==================*/
 section.areas_reflorestadas{
@@ -247,7 +341,7 @@ section.areas_reflorestadas div form input{
 	margin: 1.2vw 0 0 0;
 }
 
-section.areas_reflorestadas div form button.cadastrar_arearef{
+section.areas_reflorestadas div form button{
 	display: flex;
 	border-width: 1px;
 	border-style: solid;
@@ -259,7 +353,7 @@ section.areas_reflorestadas div form button.cadastrar_arearef{
 	transition: 1s;
 	cursor: pointer;
 }
-section.areas_reflorestadas div form button.cadastrar_arearef:hover{
+section.areas_reflorestadas div form button:hover{
 	color: white;
 	background: #2E8B57;
 	transition: 1s;
@@ -305,7 +399,7 @@ section.propriedade div form p{
 	font-size: 1em;
 	margin: 1.5vw 0;
 }
-section.propriedade div form button.cadastrar_propriedade{
+section.propriedade div form button{
 	display: flex;
 	border-width: 1px;
 	border-style: solid;
@@ -317,11 +411,12 @@ section.propriedade div form button.cadastrar_propriedade{
 	transition: 1s;
 	cursor: pointer;
 }
-section.propriedade div form button.cadastrar_propriedade:hover{
+section.propriedade div form button:hover{
 	color: white;
 	background: #2E8B57;
 	transition: 1s;
 }
+
 section.propriedade div form label.zona{
 	display: inline;
 }
@@ -366,7 +461,7 @@ section.cadastro_arvores div form p{
 	font-size: 1em;
 	margin: 1.5vw 0;
 }
-section.cadastro_arvores div form button.cadastrar_arvores{
+section.cadastro_arvores div form button{
 	display: flex;
 	border-width: 1px;
 	border-style: solid;
@@ -378,8 +473,127 @@ section.cadastro_arvores div form button.cadastrar_arvores{
 	transition: 1s;
 	cursor: pointer;
 }
-section.cadastro_arvores div form button.cadastrar_arvores:hover{
+section.cadastro_arvores div form button:hover{
 	color: white;
 	background: #2E8B57;
 	transition: 1s;
+}
+
+
+
+
+section.tela_areas{
+	display: none;
+	box-shadow: 0.8vw 0.8vw 3vw rgba(0,0,0, 0.2);
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+}
+section.tela_areas h2{
+	font-weight: bold;
+	width: 80vw;
+	margin: 1vw 3vw 1vw 3vw;
+	text-align: center;
+}
+section.tela_areas button.sair1{
+	box-shadow: 0.8vw 0.8vw 3vw rgba(0,0,0, 0.2);
+	margin: 2vw 0 2vw 50vw;
+	text-align: center;
+	width: 5vw;
+	height: 5vh;
+	border: none;
+	background: #2E8B57;
+	font-weight: bold;
+	font-size: 1em;
+	color: white;
+}
+section.tela_areas div{
+	width: 90vw;
+	height: 60vh;
+	margin-top: 8vh;
+	margin-left: 5vw;
+	border-radius: 5px;
+	background:#E8E8E8;
+	overflow: auto;
+	box-shadow: 0.8vw 0.8vw 3vw rgba(0,0,0, 0.5);
+}
+section.tela_areas div ul{
+	display: block;
+	overflow: auto;
+}
+section.tela_areas div ul li{
+	display: flex;
+	width: 89.85vw;
+	color: white;
+	background: #2E8B57;
+	line-height: 20px;
+	font-size: 0.8em;
+	border: 1px solid;
+}
+section.tela_areas div ul li p{
+	width: 100vw;
+}
+section.tela_areas div ul li span{
+	width: 60vw;
+	font-weight: bold;
+}
+
+
+
+
+
+section.tela_arvores{
+	display: none;
+	box-shadow: 0.8vw 0.8vw 3vw rgba(0,0,0, 0.2);
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+}
+section.tela_arvores h2{
+	font-weight: bold;
+	width: 80vw;
+	margin: 1vw 3vw 1vw 3vw;
+	text-align: center;
+}
+section.tela_arvores button.sair2{
+	box-shadow: 0.8vw 0.8vw 3vw rgba(0,0,0, 0.2);
+	margin: 2vw 0 2vw 50vw;
+	text-align: center;
+	width: 5vw;
+	height: 5vh;
+	border: none;
+	background: #2E8B57;
+	font-weight: bold;
+	font-size: 1em;
+	color: white;
+}
+section.tela_arvores div{
+	width: 90vw;
+	height: 60vh;
+	margin-top: 8vh;
+	margin-left: 5vw;
+	border-radius: 5px;
+	background:#E8E8E8;
+	overflow: auto;
+	box-shadow: 0.8vw 0.8vw 3vw rgba(0,0,0, 0.5);
+}
+section.tela_arvores div ul{
+	display: block;
+	overflow: auto;
+}
+section.tela_arvores div ul li{
+	display: flex;
+	width: 89.85vw;
+	color: white;
+	background: #2E8B57;
+	line-height: 20px;
+	font-size: 0.8em;
+	border: 1px solid;
+}
+section.tela_arvores div ul li p{
+	width: 100vw;
+}
+section.tela_arvores div ul li span{
+	width: 60vw;
+	font-weight: bold;
 }

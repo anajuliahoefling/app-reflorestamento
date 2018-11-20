@@ -31,6 +31,8 @@
     </div>
 
   </section>
+
+
   <section class="cadastro_user">
 
     <div>
@@ -43,19 +45,19 @@
       <input type="text" name="nome_user" id="nome_user" class="nome_usuario">
 
       <label for="codigo">Código do Proprietário∗</label>
-      <input type="text" name="codigo" id="codigo">
+      <input type="number" name="codigo" id="codigo">
 
       <label for="cpf">CPF/CNPJ∗</label>
-      <input type="text" name="cpf" id="cpf" placeholder="999.999.999-99">
+      <input type="number" name="cpf" id="cpf" placeholder="999.999.999-99">
       <label for="rg">RG∗</label>
-      <input type="text" name="rg" id="rg" placeholder="9.999.999">
+      <input type="number" name="rg" id="rg" placeholder="9.999.999">
 
       <p>Sexo</p>
       <label class="sexo"><input type="radio" name="sexo" class="botao"> Masculino </label>
       <label class="sexo"><input type="radio" name="sexo" class="botao"> Feminino </label>
       
       <label for="telefone">Telefone∗</label>
-      <input type="text" name="telefone" id="telefone" placeholder="(99) 9999-9999">
+      <input type="number" name="telefone" id="telefone" placeholder="(99) 9999-9999">
       <select name="telefone" id="telefone" > 
         <option>Celular</option>
         <option>Residencial</option>
@@ -75,20 +77,44 @@
   </section>
 
   <section class="tela_inicial">
-      <button class="propriedade">propriedade</button>
-      <button class="areas">areas</button>
-      <button class="arvores">arvores</button>
+
+    <h1>CADASTRAR:</h1>
+      <button class="propriedade">Propriedade</button>
+      <button class="areas">Áreas Reflorestadas</button>
+      <button class="arvores">Árvores</button>
+
+      <h3>CONSULTAR:</h3>
+      <button class="areascon">Áreas Reflorestadas</button>
+      <button class="arvorescon">Árvores</button>
+
+      <div>
+      <h2>CONTROLE DE REFLORESTAMENTO</h2>
+
+      <ul>
+        <li>
+          <p>Proprietário: <span class="proprietario">AnaJulia</span></p> 
+          <p>Código de Identificação: <span class="codigo-id">00</span></p> 
+          <p>Endereço: Rua Irmãos Pizzani</p> 
+          <p>Metragem: 1000</p> 
+          <p>Zona: Rural</p> 
+          <p>Multa: 1578.00 R$</p>
+        </li>
+      </ul>
+
+    </div>
+
+    <button class="sair">Sair</button> 
+
   </section>
+
 
   <section class="propriedade">
     <div>
     <form method="get" action="#">
       <legend>Cadastro Propriedade</legend>
-      <label for="codigo">Código do Proprietário∗</label>
-      <input type="text" name="codigo" id="codigo">
 
       <label for="codigo_ident">Código de Identificação∗</label>
-      <input type="text" name="codigo_ident" id="codigo_ident">
+      <input type="number" name="codigo_ident" id="codigo_ident">
 
       <label for="endereco">Endereço∗</label>
 
@@ -99,16 +125,14 @@
       <input type="text" name="cep" id="cep" placeholder="CEP">
 
       <label for="metragem">Metragem∗</label>
-      <input type="text" name="metragem" id="metragem">
+      <input type="number" name="metragem" id="metragem">
 
-      <p>Zona</p>
-      <label class="zona"><input type="radio" name="zona" class="botao"> Zona Urbana </label>
-      <label class="zona"><input type="radio" name="zona" class="botao"> Zona Rural </label>
-
-      <label for="metragem">Multa∗</label>
-      <input type="text" name="multa" id="multa">
+      <label for="metragem">Zona∗</label>
+      <input type="text" name="zona" id="zona">
 
       <button class="cadastrar_propriedade" type="button">CADASTRAR</button> 
+
+      <button class="voltar" type="button">VOLTAR</button> 
     </form>
     </div>
   </section>
@@ -117,20 +141,20 @@
       <div>
       <form method="get" action="#">
       <legend>Cadastro Áreas Reflorestadas</legend>
-      <label for="prop">Propriedade∗</label>
+      <label for="prop">Código da propriedade∗</label>
       <input type="text" name="propriedade" id="propriedade">
 
       <label for="periodo">Período∗</label>
-      <input type="text" name="periodo" id="periodo">
+      <input type="number" name="periodo" id="periodo">
 
       <label for="tamanho_prop">Tamanho total da propriedade∗</label>
-      <input type="text" name="tamanho_prop" id="tamanho_prop">
+      <input type="number" name="tamanho_prop" id="tamanho_prop">
 
       <label for="tamanho_reflor">Tamanho área reflorestada∗</label>
-      <input type="text" name="tamanho_reflor" id="tamanho_reflor">
+      <input type="number" name="tamanho_reflor" id="tamanho_reflor">
 
       <label for="quant_plantas">Quantidade de plantas∗</label>
-      <input type="text" name="quant_plantas" id="quant_plantas">
+      <input type="number" name="quant_plantas" id="quant_plantas">
 
       <label for="tipo">Tipo∗</label>
       <input type="text" name="tipo" id="tipo">
@@ -144,73 +168,56 @@
       <label for="arvore_plantada">Árvore plantada∗</label>
       <input type="text" name="arvore_plantada" id="arvore_plantada">
 
-       <button class="cadastrar_arearef" type="button">CADASTRAR</button>   
+       <button class="cadastrar_arearef" type="button">CADASTRAR</button>  
+
+       <button class="voltar1" type="button">VOLTAR</button>  
 
     </form>
     </div>
+  </section>
+
+  <section class="tela_areas">
+      <div>
+      <h2>ÁREAS REFLORESTADAS</h2>
+      <ul>
+      </ul>
+    </div>
+    <button class="sair1">Sair</button> 
   </section>
 
 <section class="cadastro_arvores">
   <div>
         <form method="get" action="#">
         <legend>Cadastro Árvore</legend>
+
       <label for="nome">Nome∗</label>
-      <input type="text" name="nome" id="nome">
+      <input type="text" name="arvore" id="arvore">
 
       <label for="desc">Descrição∗</label>
       <input type="text" name="desc" id="desc">
 
-     <p>Status</p>
-      <label class="status"><input type="radio" name="status" class="botao"> Adequada </label>
-      <label class="status"><input type="radio" name="status" class="botao"> Inadequada </label>
-<!-- 
-    <div>
-      <h2>CONTROLE DE REFLORESTAMENTO</h2>
-
-      <ul>
-        <li>
-          <p>Propriedade1</p>
-          <p>Proprietário: </p> <span class="proprietário">resposta</span>
-          <p>Código de Identificação: </p> <span class="codigo-id">00</span>
-          <p>Endereço: </p> <span class="endereco">resposta</span>
-          <p>Metragem: </p> <span class="metragem">1000</span>
-          <p>Zona: </p> <span class="zona">Rural</span>
-          <p>Multa: </p> <span class="multa">00.00</span>
-        </li>
-
-
-        <li>
-          <h3>Propriedade 2</h3>
-          <p>Proprietário: </p> <span class="proprietário">resposta</span>
-          <p>Código de Identificação: </p> <span class="codigo-id">resposta</span>
-          <p>Endereço: </p> <span class="endereco">resposta</span>
-          <p>Metragem: </p> <span class="metragem">resposta</span>
-          <p>Zona: </p> <span class="zona">resposta</span>
-          <p>Multa: </p> <span class="multa">resposta</span>
-        </li>
-
-        <li>
-          <h3>Propriedade 3</h3>
-          <p>Proprietário: </p> <span class="proprietário">resposta</span>
-          <p>Código de Identificação: </p> <span class="codigo-id">resposta</span>
-          <p>Endereço: </p> <span class="endereco">resposta</span>
-          <p>Metragem: </p> <span class="metragem">resposta</span>
-          <p>Zona: </p> <span class="zona">resposta</span>
-          <p>Multa: </p> <span class="multa">resposta</span>
-        </li>
-      </ul>
-
-    </div>
-
-    <button class="sair">Sair</button> -->
+      <label for="desc">Status∗</label>
+      <input type="text" name="status" id="status">
 
       <label for="necessidades">Necessidades∗</label>
       <input type="text" name="necessidades" id="necessidades">
 
       <button class="cadastrar_arvores" type="button">CADASTRAR</button>   
+      <button class="voltar2" type="button">VOLTAR</button> 
 
     </form>
     </div>
+  </section>
+
+<section class="tela_arvores">
+
+      <div>
+      <h2>ÁRVORES CADASTRADAS</h2>
+      <ul>
+      </ul>
+    </div>
+    <button class="sair2">Sair</button> 
+
   </section>
 
 <script src="js/jquery-3.3.1.min.js"></script>
@@ -224,18 +231,16 @@ propriedade.on("click", function(){
     $(".tela_inicial").hide();
     $(".propriedade").show();
 });
+
 areas.on("click", function(){
    $(".tela_inicial").hide();
     $(".areas_reflorestadas").show();
 });
+
 arvores.on("click", function(){
     $(".tela_inicial").hide();
-    $(".cadastro_arvores").show();
+    $(".cadastro_arvores").show(); zona = $("#rua").val();
 });
-
-
-
-
   
 $(".registro").on("click", function(){
     $(".tela_login").hide();
@@ -246,6 +251,94 @@ $(".sessao").on("click",function(){
     $(".cadastro_user").hide();
     $(".tela_login").show();
 });
+
+$(".voltar").on("click", function(){
+    $(".propriedade").hide();
+    $(".tela_inicial").show();
+    $("button.propriedade").show();
+});
+$(".voltar1").on("click", function(){
+    $(".areas_reflorestadas").hide();
+    $(".tela_inicial").show();
+    $("button.areas").show();
+});
+
+$(".voltar2").on("click", function(){
+    $(".cadastro_arvores").hide();
+    $(".tela_inicial").show();
+    $("button.arvores").show();
+});
+$(".sair").on("click", function(){
+    $(".tela_inicial").hide();
+    $(".tela_login").show();
+});
+$(".sair1").on("click", function(){
+    $(".tela_areas").hide();
+    $(".tela_inicial").show();
+});
+$(".sair2").on("click", function(){
+    $(".tela_arvores").hide();
+    $(".tela_inicial").show();
+});
+$(".arvorescon").on("click", function(){
+    $(".tela_inicial").hide();
+    $(".tela_arvores").show();
+});
+$(".areascon").on("click", function(){
+    $(".tela_inicial").hide();
+    $(".tela_areas").show();
+});
+
+cont_prop =0;
+
+$(".cadastrar_propriedade").on("click", function(){
+    cont_prop+1;
+    endereco = $("#rua").val();
+    metragem = $("#metragem").val();
+    zona = $("#zona").val();
+    multa = (5*metragem*10)/100;
+
+    $(".tela_inicial div ul").append("<li><p>Proprietário: "+nome+"</p><p> Código de Identificação: "+codigo+"</p><p> Endereço: "+endereco+"</p><p> Metragem: "+metragem+" m</p><p> Zona: "+zona+"</p><p> Multa: "+multa+".00 R$</p>");
+
+    $(".propriedade").hide();
+    $(".tela_inicial").show();
+    $("button.propriedade").show();
+});
+
+// if($(this) == $(".tela_inicial div ul li")){
+//   alert("deu certo");
+// }
+$(".cadastrar_arearef").on("click", function(){
+    periodo = $("#periodo").val();
+    tmtotalp = $("#tamanho_prop").val();
+    tmtotala = $("#tamanho_reflor").val();
+    quant_plantas =$("#quant_plantas").val();
+    tipo =$("#tipo").val();
+    objetivo =$("#objetivo").val();
+    observações =$("#obser").val();
+    arvore_plantada =$("#arvore_plantada").val();
+
+    $(".tela_areas div ul").append("<li><p><Propriedade "+cont_prop+"></p><p>Periodo "+periodo+"</p><p>Tamanho Total Propriedade "+tmtotalp+"</p><p>Tamanho Total Área Reflorestada "+tmtotala+"</p><p>Quantidade de Plantas "+quant_plantas+"</p><p>Tipo "+tipo+"</p><p>Objetivo "+objetivo+"</p><p>Observações "+observações+"</p><p>Árvore Plantada "+arvore_plantada+"</p>");
+
+    $(".areas_reflorestadas").hide();
+    $(".tela_areas").show();
+
+});
+
+
+$(".cadastrar_arvores").on("click", function(){
+    
+    arvore = $("#arvore").val();
+    descricao = $("#desc").val();
+    status = $("#status").val();
+    necessidades =$("#necessidades").val();
+
+    $(".tela_arvores div ul").append("<li><p>Descrição "+descricao+"</p><p>Status "+status+"</p><p>Necessidades "+necessidades+"</p><p><Nome "+arvore+"></p></li>");
+
+    $(".cadastro_arvores").hide();
+    $(".tela_arvores").show();
+});
+
 
 $(".cadastro").on("click",function(){
 
@@ -279,28 +372,14 @@ $(".login").on("click", function(){
     } else if(usuario_login == nome_user && senha_login == senha_user){
       $(".tela_login").hide();
       $(".tela_inicial").show();
+      $(".proprietario").text(nome);
+      $(".codigo-id").text(codigo);
     } else{
        alert("Dados incorretos, tente novamente");
     }
 
 });
 
-// function Login() {
-//   var done=0;
-//   var usuario = document.getElementsByName('usuario')[0].value;
-//   var senha= document.getElementsByName('senha')[0].value;
-//   usuario = usuario.toLowerCase();
-//   seha=senha.toLowerCase();
-
-//   if (usuario=="admin" && senha=="admin") {
-//     window.location="/p/admin.html";
-//     done=1;
-//     console.log("Entrou");
-//     i = 1;
-//     $(".tela_login").hide();
-//     $(".tela_inicial").show();
-//   } 
-// }
 
 </script>
 </body>
